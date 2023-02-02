@@ -1,4 +1,5 @@
 ; coff2.fasm
+; C:\Users\U5353\Downloads\fasmw17330\FASM.EXE coff2.asm build/coff2.obj
 format MS COFF
      
 include "Win32AX.Inc"

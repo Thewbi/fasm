@@ -13,12 +13,12 @@ start:
         sub     rsp, 8*5
 
         ; use rbx as counter as it is preserved across windows API calls
-        mov rbx, 10
+        mov     rbx, 10
 
-        .for_loop_check:
+.for_loop_check:
 
-        cmp rbx, 0
-        je .exit_for_loop
+        cmp     rbx, 0
+        je      .exit_for_loop
 
         mov     r9d, 0
         lea     r8, [_caption]
@@ -32,7 +32,7 @@ start:
         dec rbx
         jmp .for_loop_check
 
-        .exit_for_loop:
+.exit_for_loop:
 
         mov     ecx, eax
         call    [ExitProcess]
