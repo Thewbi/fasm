@@ -1,3 +1,5 @@
+; https://board.flatassembler.net/topic.php?p=226973#226973
+;
 ; C:\Users\U5353\Downloads\fasmw17330\FASM.EXE fastcall_64bit.asm build/fastcall_64bit.obj
 ; C:\Users\U5353\Downloads\Golink\GoLink.exe -fo build/fastcall_64bit.exe build/fastcall_64bit.obj kernel32.dll user32.dll
 ; build\fastcall_64bit.exe

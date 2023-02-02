@@ -7,7 +7,7 @@
 
 format MS64 COFF
 
-include '%fasminc%\win64ax.inc'
+;include '%fasminc%\win64ax.inc'
 
 extrn MessageBoxA
 extrn ExitProcess
@@ -17,17 +17,19 @@ section '.text' code readable executable
  public Start
 
  Start:
-        ;mov     r9d,0
-        ;lea     r8,[_caption]
-        ;lea     rdx,[_message]
-        ;mov     rcx,0
-        ;call    MessageBoxA
-        
-        push    0
-        push    _caption
-        push    _message
-        push    0
+        push    rbp                     ; align stack
+        sub     rsp, 8 * 4              ; shadow space
+        mov     r9d,0
+        lea     r8,[_caption]
+        lea     rdx,[_message]
+        mov     rcx,0
         call    MessageBoxA
+        
+        ;push    0
+        ;push    _caption
+        ;push    _message
+        ;push    0
+        ;call    MessageBoxA
         
         mov     ecx, eax
         call    ExitProcess
